@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a4d5c;
+  --primary-dark: #153d4a;
+  --primary-light: #2a6b7d;
+  --accent: #d4a024;
+  --accent-dark: #b8891f;
+  --accent-light: #e6b84d;
+  --brand-green: #3d7a45;
+  --dark-navy: #1a4d5c;
+  --darker-navy: #0f2d36;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-8 rounded transition-all duration-300 inline-flex items-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white hover:bg-white hover:text-dark-navy font-semibold py-3 px-8 rounded transition-all duration-300;
+  }
+
+  .green-gradient {
+    background: linear-gradient(135deg, #1a4d5c 0%, #153d4a 100%);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, #d4a024 0%, #b8891f 100%);
+  }
+
+  .dark-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+
+  .section-title {
+    @apply text-accent font-semibold uppercase tracking-wider text-sm mb-2;
+  }
+
+  .section-heading {
+    @apply font-rubik text-3xl md:text-4xl lg:text-5xl font-bold text-dark-navy leading-tight;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
