@@ -1,4 +1,4 @@
-# Energia - Solar Energy Website
+# vedaya - Solar Energy Website
 
 A modern React + Tailwind CSS single-page application cloning the Energia solar energy website.
 
