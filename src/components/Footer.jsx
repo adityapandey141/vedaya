@@ -36,7 +36,7 @@ const Footer = () => {
               <img
                 src="/logo.png"
                 alt="Vedaya Renewables"
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto "
               />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
